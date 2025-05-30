@@ -56,14 +56,14 @@ This app uses **Clean Architecture** with the following layers:
 
 ### Prerequisites
 
-- Flutter 3.10.0 or higher
+- Flutter 3.24.5 or higher
 - Dart SDK
 - Internet connection (for API access)
 
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/flutter-meals-app.git
+git clone https://github.com/EmmanuelOchia2/recipes_app.git
 cd flutter-meals-app
 flutter pub get
 flutter run
@@ -80,7 +80,7 @@ Base URL: https://www.themealdb.com/api/json/v1/1/
 ```
 
 Endpoints used:
-- `/filter.php?a=Canadian`
+- `/filter.php?a=Canadian` right now set as Canadian in the code but can be later changed
 - `/lookup.php?i={id}`
 - `/search.php?s={name}`
 
@@ -103,7 +103,6 @@ No authentication required for public access.
 | `meals_repository.dart` | Interfaces with API client |
 | `recipes_bloc.dart`     | Central logic controller for recipes |
 | `meal_detail_response.dart` | Model for detailed meal info |
-| `scrollable_widget.dart` | Custom infinite scrolling widget |
 | `get_meals_usecase.dart` | Retrieves meal list by area |
 | `search_meal_by_name_usecase.dart` | Search logic |
 
