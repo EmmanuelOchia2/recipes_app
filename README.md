@@ -1,5 +1,5 @@
 
-# 🍽️ Flutter Meals App
+# 🍽️ Flutter Recipes App
 
 A Flutter application that showcases meals using [TheMealDB](https://www.themealdb.com/api.php) API. It implements a clean architecture with BLoC state management and layered responsibilities.
 
