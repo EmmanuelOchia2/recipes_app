@@ -9,7 +9,14 @@ class MealDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(mealDetail.strMeal),
+        title: Hero(
+          tag: mealDetail.strMeal,
+          child: Material(
+            child: Text(
+              mealDetail.strMeal,
+            ),
+          ),
+        ),
       ),
       body: Container(
         margin: const EdgeInsets.symmetric(
@@ -35,10 +42,13 @@ class MealDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   const Spacer(),
-                  RoundedSquaredImageWidget(
-                    strMealThumb: mealDetail.strMealThumb,
-                    height: 180,
-                    width: 180,
+                  Hero(
+                    tag: mealDetail.idMeal,
+                    child: RoundedSquaredImageWidget(
+                      strMealThumb: mealDetail.strMealThumb,
+                      height: 180,
+                      width: 180,
+                    ),
                   )
                 ],
               ),

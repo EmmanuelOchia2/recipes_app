@@ -14,10 +14,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
       home: BlocProvider(
         create: (context) => RecipesBloc()..add(GetMealsEvent()),
-        child: HomeScreen(),
+        child: const HomeScreen(),
       ),
     );
   }
